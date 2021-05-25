@@ -263,6 +263,13 @@ div.navbar a.page_link {
 div.navbar a.page_link.active {
     text-decoration: underline;
 }
+div.navbar a.social_link i {
+    margin-top: 0.75rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    float: right;
+    color: white;
+}
 
 h1.standalone_header {
     margin-left: 1rem;
