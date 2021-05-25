@@ -286,3 +286,7 @@ h3.blog_heading {
 div.blog_container p {
     padding: 0.25rem;
 }
+
+.construction_notice {
+    text-align: center;
+}
