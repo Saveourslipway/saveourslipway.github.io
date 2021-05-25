@@ -1,0 +1,288 @@
+:root {
+    --colour-1: #067d9f;
+    --colour-2: #125450;
+    --colour-3: #0e70ad;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scroll_container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll_container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html {
+    color: #3f3f3f;
+}
+
+div.scroll_container {
+    top: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+.section, .header {
+    scroll-snap-align: center;
+}
+.section.disable_scroll_lock, .header.disable_scroll_lock {
+    scroll-snap-align: none;
+}
+
+.colour-2 {
+    color: var(--colour-2);
+}
+.colour-3 {
+    color: var(--colour-3);
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+}
+img.banner {
+    width: 100%;
+}
+img.banner.middle {
+    margin: 3rem 0;
+}
+img.background {
+    height: 100vh;
+}
+img.background.right {
+    float: right;
+}
+.header div.title_container {
+    margin: 3rem 5rem;
+    display: flex;
+    flex-direction: row;
+}
+.header h1 {
+    flex: 4;
+    /* margin-left: 2rem; */
+    border-left: solid 0.25rem var(--colour-1);
+    padding-left: 1rem;
+    height: 8rem;
+    font-size: 4rem;
+    line-height: 8rem;
+}
+.header div.img_container {
+    flex: 1;
+}
+.header div.img_container img.portrait {
+    height: 8rem;
+    width: 8rem;
+}
+div.section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+div.section.flex {
+    display: flex;
+    flex-direction: column;
+}
+div.section_header {
+    position: absolute;
+    left: 3rem;
+    bottom: 3rem;
+
+    padding: 1rem;
+    border-left: solid 0.25rem var(--colour-1);
+
+    color: white;
+
+    font-size: 2rem;
+}
+.vertical_style {
+    display: inline-block;
+    margin-left: 3rem;
+    padding-top: 1rem;
+    border-top: solid 0.25rem var(--colour-1);
+    width: max-content;
+}
+ul {
+    margin-top: 1rem;
+    margin-left: 3rem;
+    width: 60%;
+}
+ul li {
+    padding: 0.5rem;
+}
+div.caption_gallery {
+    display: flex;
+    flex-direction: row;
+}
+div.caption {
+    flex: 1;
+    padding: 3rem;
+}
+div.caption h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.caption_plus_image {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 5rem);
+}
+.caption_plus_image div.img_container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.caption_plus_image div.img_container div.buffer {
+    flex: 1;
+}
+.caption_plus_image div.caption_gallery{
+    flex: 1;
+}
+.caption_plus_image div.caption {
+    flex: 1;
+}
+.caption h3.caption_heading {
+    color: var(--colour-2);
+    text-align: left;
+}
+div.caption.extra_padding {
+    padding: 5rem;
+}
+div.caption_gallery.added_buffers div.buffer {
+    flex: 1;
+}
+div.caption_gallery.added_buffers div.caption {
+    flex: 3;
+}
+div.caption p {
+    padding: 0.5rem;
+}
+div.caption.vertical_center {
+    padding-top: 0;
+}
+div.caption img.caption_img {
+    width: 100%;
+}
+div.vertical_center {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 3.75rem);
+}
+div.vertical_center div.buffer {
+    flex: 1;
+}
+div.table_container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+div.table_row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+div.table_heading {
+    border-width: 0.25rem 0;
+    border-style: solid;
+    border-color: var(--colour-1);
+    color: var(--colour-1);
+}
+div.table_cell {
+    flex: 1;
+    position: relative;
+}
+div.table_cell p, div.table_heading h4 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+div.quotation_container {
+    color: white;
+    position: absolute;
+    bottom: 6rem;
+    left: 3rem;
+}
+div.quotation_container h1.quotation {
+    font-size: 8rem;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2%;
+}
+div.quotation_container div.text_container {
+    width: 85%;
+    margin-left: 7.5%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    font-size: 1.25rem;
+}
+
+div.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    
+    background: black;
+    opacity: 0.1;
+
+    transition: all 0.5s;
+
+    z-index: 1;
+}
+div.navbar.active {
+    opacity: 0.5;
+    font-size: 1.2rem;
+}
+
+div.navbar a.page_link {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+    padding: 0 1rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+div.navbar a.page_link.active {
+    text-decoration: underline;
+}
+
+h1.standalone_header {
+    margin-left: 1rem;
+    padding: 1rem;
+    border-left: solid 0.25rem var(--colour-1);
+}
+div.blog_container {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    background:rgba(0, 0, 0, 0.1)
+}
+h3.blog_heading {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-left: solid 0.25rem var(--colour-1);
+}
+div.blog_container p {
+    padding: 0.25rem;
+}
