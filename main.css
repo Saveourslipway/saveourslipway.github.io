@@ -277,12 +277,9 @@ h1.standalone_header {
     border-left: solid 0.25rem var(--colour-1);
 }
 div.blog_container {
-    margin-left: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem auto;
+    width: 70%;
     padding: 1rem;
-    width: calc(100% - 2rem);
-    background:rgba(0, 0, 0, 0.1)
 }
 h3.blog_heading {
     margin-left: 1rem;
@@ -290,10 +287,65 @@ h3.blog_heading {
     padding: 1rem;
     border-left: solid 0.25rem var(--colour-1);
 }
+div.blog_text_and_image {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+div.blog_text_and_image div.blog_text, div.blog_text_and_image img {
+    flex: 1;
+    margin: 1rem;
+}
+div.blog_text_and_image img {
+    border: 3px solid var(--colour-1);
+}
+div.blog_text {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid var(--colour-1);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+div.dual_blog_text {
+    width: 100%;
+    justify-content: center;
+}
+div.dual_blog_text div.blog_text {
+    display: inline-block;
+    width: 45%;
+    margin: 2%;
+    vertical-align: middle;
+}
+div.blog_text p {
+    flex: 1;
+}
 div.blog_container p {
     padding: 0.25rem;
 }
-
+div.blog_image, div.blog_image img {
+    width: 100%;
+}
+div.action_call {
+    border: 3px solid green;
+    padding: 1rem;
+}
+div.action_call h1 {
+    color: green;
+    text-align: center;
+}
+div.blog_text.positive {
+    color: green;
+    border-color: green;
+}
+div.blog_title {
+    text-align: center;
+    border: 0.3rem solid var(--colour-1);
+    padding: 0.5rem;
+    color: var(--colour-1);
+}
+div.blog_title h1 {
+    margin-bottom: 0.5rem;
+}
 .construction_notice {
     text-align: center;
 }
