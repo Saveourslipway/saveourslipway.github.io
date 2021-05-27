@@ -4,7 +4,6 @@ class NavBar {
 
     constructor() {
         this._elem = document.getElementById("navbar");
-        console.log(this._elem);
         this._elem.onmouseenter = this.highlight;
         this._elem.onmouseleave = this.removeHighlight;
     }
@@ -19,6 +18,5 @@ class NavBar {
 
 let navbar;
 window.onload = function() {
-    console.log("Trigger");
     navbar = new NavBar();
 }
