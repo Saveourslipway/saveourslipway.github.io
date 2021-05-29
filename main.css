@@ -10,6 +10,21 @@
 }
 
 @media (max-width: 768px) {
+    div.header div.title_container {
+        margin: 1rem;
+    }
+    div.title_container h1 {
+        margin-left: 0;
+        font-size: 2rem;
+        line-height: 2rem;
+        height: fit-content;
+    }
+    div.header div.title_container div.img_container {
+        display: flex;
+    }
+    div.header div.title_container div.img_container img {
+        flex: 1;
+    }
     html div.blog_container {
         width: 90%;
     }
