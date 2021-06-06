@@ -427,3 +427,6 @@ div.blog_text hr {
     margin: 0.5rem auto;
     width: 80%;
 }
+p.right {
+    text-align: right;
+}
